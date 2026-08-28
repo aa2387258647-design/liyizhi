@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="梨一枝 · 主案建筑师｜住宅 × 文旅 · 全流程设计服务">
+<meta property="og:description" content="7 年主案建筑师，住宅+文旅双能，地产与文旅项目全流程设计服务。合作联系：2387258647@qq.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>梨一枝 · 主案建筑师｜住宅 × 文旅 · 全流程设计服务</title>
+<meta name="description" content="梨一枝，7 年主案建筑师，住宅+文旅双能，从前期策划、规划方案到施工图的全流程设计服务。地产与文旅项目合作联系：2387258647@qq.com">
+<style>
+  :root{
+    --ink:#1a1a1a;
+    --ink-soft:#555;
+    --ink-faint:#9a938a;
+    --paper:#fafaf8;
+    --card:#ffffff;
+    --line:#e5e2dc;
+    --accent:#a34a2a;
+    --accent-soft:#f3e9e2;
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+    --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+  ::selection{background:var(--accent);color:#fff;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- 导航 ---------- */
+  header{position:sticky;top:0;background:rgba(250,250,248,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:50;}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{font-family:var(--serif);font-size:20px;letter-spacing:.18em;text-decoration:none;color:var(--ink);}
+  .brand small{font-family:var(--sans);font-size:10px;letter-spacing:.3em;color:var(--ink-faint);margin-left:8px;}
+  .nav-links{display:flex;gap:28px;list-style:none;}
+  .nav-links a{font-size:14px;color:var(--ink-soft);text-decoration:none;letter-spacing:.05em;transition:color .2s;}
+  .nav-links a:hover{color:var(--accent);}
+  .nav-cta{font-size:14px;border:1px solid var(--ink);padding:8px 20px;text-decoration:none;color:var(--ink);transition:all .2s;}
+  .nav-cta:hover{background:var(--ink);color:var(--paper);}
+  .menu-btn{display:none;background:none;border:none;font-size:22px;cursor:pointer;color:var(--ink);}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;padding:120px 0 100px;border-bottom:1px solid var(--line);overflow:hidden;}
+  .hero::before{content:"";position:absolute;right:-160px;top:-160px;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle,rgba(163,74,42,.06),transparent 70%);pointer-events:none;}
+  .hero::after{content:"";position:absolute;left:-200px;bottom:-240px;width:560px;height:560px;border-radius:50%;
+    background:radial-gradient(circle,rgba(26,26,26,.04),transparent 70%);pointer-events:none;}
+  .hero .name{font-family:var(--serif);font-size:clamp(52px,8.5vw,96px);letter-spacing:.14em;line-height:1.05;}
+  .hero .role{margin-top:20px;font-family:var(--serif);font-size:clamp(18px,2.6vw,26px);letter-spacing:.14em;color:var(--ink);}
+  .hero .role b{color:var(--accent);font-weight:600;}
+  .hero p.intro{margin-top:28px;max-width:660px;color:var(--ink-soft);font-size:16px;}
+  .hero p.intro strong{color:var(--ink);}
+  .hero .cta{margin-top:42px;display:flex;gap:16px;flex-wrap:wrap;position:relative;z-index:1;}
+
+  .btn{display:inline-block;padding:14px 36px;font-size:15px;letter-spacing:.1em;text-decoration:none;transition:all .25s;}
+  .btn-solid{background:var(--ink);color:var(--paper);}
+  .btn-solid:hover{background:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(163,74,42,.25);}
+  .btn-outline{border:1px solid var(--ink);color:var(--ink);}
+  .btn-outline:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px);}
+
+  /* ---------- 数据条 ---------- */
+  .stats{border-bottom:1px solid var(--line);}
+  .stats .grid{display:grid;grid-template-columns:repeat(4,1fr);}
+  .stat{padding:46px 12px;text-align:center;border-right:1px solid var(--line);}
+  .stat:last-child{border-right:none;}
+  .stat .num{font-family:var(--serif);font-size:46px;color:var(--accent);line-height:1.2;}
+  .stat .num sup{font-size:22px;}
+  .stat .label{font-size:13px;color:var(--ink-faint);letter-spacing:.18em;margin-top:6px;}
+
+  /* ---------- 通用区块 ---------- */
+  section{padding:100px 0;border-bottom:1px solid var(--line);}
+  .sec-head{margin-bottom:58px;}
+  .sec-head .en{font-size:12px;letter-spacing:.4em;color:var(--ink-faint);}
+  .sec-head h2{font-family:var(--serif);font-size:clamp(26px,4vw,36px);letter-spacing:.1em;margin-top:12px;}
+  .sec-head .desc{color:var(--ink-soft);margin-top:14px;max-width:640px;font-size:15px;}
+
+  /* ---------- 服务 ---------- */
+  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .service{background:var(--card);padding:40px 32px;transition:background .25s,transform .25s;position:relative;}
+  .service::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);transform:scaleY(0);transform-origin:top;transition:transform .3s;}
+  .service:hover{background:#fff;transform:translateY(-3px);}
+  .service:hover::before{transform:scaleY(1);}
+  .service .no{font-family:var(--serif);font-size:13px;color:var(--accent);letter-spacing:.25em;}
+  .service h3{font-family:var(--serif);font-size:20px;margin:14px 0 12px;letter-spacing:.05em;}
+  .service p{font-size:14px;color:var(--ink-soft);}
+
+  /* ---------- 作品 ---------- */
+  .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:52px 44px;}
+  .project .ph{aspect-ratio:16/10;position:relative;overflow:hidden;
+    background:linear-gradient(135deg,#f0ede6,#e6e1d7);border:1px solid var(--line);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+    color:#a39c8f;transition:border-color .3s;}
+  .project .ph::before{content:"";position:absolute;inset:12px;border:1px dashed #cfc8ba;border-radius:2px;}
+  .project .ph svg{width:34px;height:34px;opacity:.6;position:relative;}
+  .project .ph span{font-size:12px;letter-spacing:.3em;position:relative;}
+  .project .tag{display:inline-block;margin-top:20px;font-size:12px;letter-spacing:.2em;color:var(--accent);border:1px solid var(--accent);padding:3px 14px;border-radius:999px;}
+  .project h3{font-family:var(--serif);font-size:21px;margin-top:14px;letter-spacing:.05em;transition:color .2s;}
+  .project:hover h3{color:var(--accent);}
+  .project .meta{font-size:13px;color:var(--ink-faint);margin-top:6px;letter-spacing:.04em;}
+  .project p{font-size:14px;color:var(--ink-soft);margin-top:12px;}
+
+  /* ---------- 关于 ---------- */
+  .about-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:68px;}
+  .about-text p{color:var(--ink-soft);font-size:15px;margin-bottom:18px;}
+  .about-text .quote{font-family:var(--serif);font-size:18px;color:var(--ink);border-left:3px solid var(--accent);padding-left:22px;margin:28px 0;line-height:1.8;}
+  .timeline{position:relative;padding-left:26px;border-left:1px solid var(--line);}
+  .tl-item{position:relative;padding-bottom:30px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{content:"";position:absolute;left:-31px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft);}
+  .tl-item .y{font-size:13px;color:var(--ink-faint);letter-spacing:.12em;}
+  .tl-item h4{font-family:var(--serif);font-size:16px;margin:4px 0 2px;}
+  .tl-item .co{font-size:13px;color:var(--ink-soft);}
+  .skills{margin-top:36px;}
+  .skills h4{font-size:13px;letter-spacing:.25em;color:var(--ink-faint);margin-bottom:12px;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{font-size:13px;border:1px solid var(--line);padding:5px 15px;color:var(--ink-soft);background:#fff;transition:all .2s;}
+  .chip:hover{border-color:var(--accent);color:var(--accent);}
+
+  /* ---------- 合作流程 ---------- */
+  .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .step{background:var(--card);padding:34px 22px;position:relative;transition:background .25s;}
+  .step:hover{background:#fff;}
+  .step .n{font-family:var(--serif);font-size:30px;color:var(--accent);}
+  .step h4{font-family:var(--serif);font-size:17px;margin:12px 0 8px;}
+  .step p{font-size:13px;color:var(--ink-soft);}
+
+  /* ---------- 联系 ---------- */
+  .contact{text-align:center;background:linear-gradient(180deg,#fafaf8,#f4f1ea);}
+  .contact .sec-head{text-align:center;}
+  .contact .sub{color:var(--ink-soft);font-size:15px;margin-bottom:48px;}
+  .contact-ways{display:flex;justify-content:center;gap:64px;flex-wrap:wrap;}
+  .way{text-align:center;}
+  .way .k{font-size:12px;letter-spacing:.3em;color:var(--ink-faint);}
+  .way .v{font-family:var(--serif);font-size:19px;margin-top:8px;}
+  .way .v a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px;transition:color .2s;}
+  .way .v a:hover{color:var(--accent);}
+
+  footer{padding:50px 0 70px;text-align:center;color:var(--ink-faint);font-size:13px;letter-spacing:.12em;}
+  footer .up{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;}
+  footer .up:hover{color:var(--accent);border-color:var(--accent);}
+
+  /* ---------- 响应式 ---------- */
+  @media(max-width:880px){
+    .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;padding:16px 24px;gap:16px;}
+    .nav-links.open{display:flex;}
+    .menu-btn{display:block;}
+    .stats .grid{grid-template-columns:repeat(2,1fr);}
+    .stat:nth-child(2){border-right:none;}
+    .stat:nth-child(-n+2){border-bottom:1px solid var(--line);}
+    .services,.flow{grid-template-columns:repeat(2,1fr);}
+    .projects{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;gap:48px;}
+    .hero{padding:84px 0 64px;}
+  }
+  @media(max-width:540px){ .services,.flow{grid-template-columns:1fr;} .contact-ways{gap:36px;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">梨一枝<small>QING LI</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">服务</a></li>
+      <li><a href="#projects">作品</a></li>
+      <li><a href="#about">关于</a></li>
+      <li><a href="#flow">合作流程</a></li>
+      <li><a href="#contact">联系</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">聊聊你的项目</a>
+    <button class="menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <h1 class="name">梨一枝</h1>
+    <div class="role">主案建筑师 · 住宅 <b>×</b> 文旅 · 全流程设计服务</div>
+    <p class="intro">7 年主案建筑师，亲历住宅 + 文旅双赛道，完整经历强排、户型、立面、投标、汇报全流程。住宅产品力扎实，文旅策划有感觉——从前期策划到施工图，<strong>一个人就是一家事务所</strong>。</p>
+    <div class="cta">
+      <a href="mailto:2387258647@qq.com" class="btn btn-solid">聊聊你的项目</a>
+      <a href="#projects" class="btn btn-outline">看作品</a>
+    </div>
+  </div>
+</section>
+
+<!-- 数据 -->
+<section class="stats">
+  <div class="wrap">
+    <div class="grid">
+      <div class="stat"><div class="num">7<sup>年</sup></div><div class="label">主案经验</div></div>
+      <div class="stat"><div class="num">15<sup>+</sup></div><div class="label">完整项目</div></div>
+      <div class="stat"><div class="num">30<sup>+</sup>万㎡</div><div class="label">主创面积</div></div>
+      <div class="stat"><div class="num">4<sup>家</sup></div><div class="label">头部公司</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 服务 -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="en">SERVICES</div>
+      <h2>能为你做什么</h2>
+      <div class="desc">地产与文旅项目全流程设计服务：从前期策划到施工图，可整体委托，也可按环节合作（方案分包、图纸生产、投标支持）。</div>
+    </div>
+    <div class="services">
+      <div class="service"><div class="no">01</div><h3>前期策划与定位</h3><p>文旅项目立项逻辑、产品定位、在地文化研究——先想清楚"做什么、给谁做、怎么活"，再动手。</p></div>
+      <div class="service"><div class="no">02</div><h3>规划与方案设计</h3><p>总图规划、强排测算、复合产品策略（高层+叠墅、居住+商业），让方案既好看又能算得过账。</p></div>
+      <div class="service"><div class="no">03</div><h3>建筑方案与户型创新</h3><p>住宅产品力打磨、户型标准化研发，用产品思维做设计，沉淀可复用的方法论。</p></div>
+      <div class="service"><div class="no">04</div><h3>施工图与深化</h3><p>多专业协同、图纸生产、改稿管理——按固定范围交付，避免无限修改，保证节点可控。</p></div>
+      <div class="service"><div class="no">05</div><h3>投标与汇报</h3><p>两轮投标实战经验、方案文本、汇报表达——帮你在评标现场把方案讲清楚、讲动人。</p></div>
+      <div class="service"><div class="no">06</div><h3>文旅改造与城市更新</h3><p>历史建筑保护与改建、旧改活化、民宿+汤池+度假复合目的地打造。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 作品 -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="en">SELECTED WORKS</div>
+      <h2>精选项目</h2>
+      <div class="desc">以下为近年代表项目。图片与更多案例整理中，将陆续补充。</div>
+    </div>
+    <div class="projects">
+
+      <div class="project">
+        <div class="ph">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5-9 9"/></svg>
+          <span>项目图片 · 待补充</span>
+        </div>
+        <div class="tag">文旅度假</div>
+        <h3>三亚海棠湾高端文旅度假社区</h3>
+        <div class="meta">项目总负责人 · 2024—2025 · 含居住/商业/幼儿园/社区公园/售楼处</div>
+        <p>主持总图到单体的全程把控，主导高端文旅度假社区整体规划；融合文旅与居住两种产品线，平衡商业价值与运营逻辑。</p>
+      </div>
+
+      <div class="project">
+        <div class="ph">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5-9 9"/></svg>
+          <span>项目图片 · 待补充</span>
+        </div>
+        <div class="tag">文旅改造</div>
+        <h3>安徽汤池馆民宿改造</h3>
+        <div class="meta">主案建筑师 · 2025 · 民宿 + 汤池 + 度假</div>
+        <p>将废弃安置房小区与会议中心改造为"民宿+汤池+度假"复合目的地，主持外立面、景观、室内整体改造设计。</p>
+      </div>
+
+      <div class="project">
+        <div class="ph">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5-9 9"/></svg>
+          <span>项目图片 · 待补充</span>
+        </div>
+        <div class="tag">文旅度假</div>
+        <h3>崇明东滩花园文旅度假区</h3>
+        <div class="meta">主创 · 酒店+客房设计 · 2022—2024 · 叠墅+商业+高尔夫</div>
+        <p>主导叠墅区酒店与客房设计，参与部分住宅单体图纸，配合大型文旅度假项目从规划到落地的完整流程。</p>
+      </div>
+
+      <div class="project">
+        <div class="ph">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5-9 9"/></svg>
+          <span>项目图片 · 待补充</span>
+        </div>
+        <div class="tag">城市更新</div>
+        <h3>临海十伞巷历史建筑群更新</h3>
+        <div class="meta">方案负责人 · 2023 · 历史建筑保护 + 改建</div>
+        <p>深入调研建筑历史与临海建筑群特点，主导新建与保留改建设计；多次现场调研、文献查阅与甲方多轮沟通，推进方案落地。</p>
+      </div>
+
+      <div class="project">
+        <div class="ph">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5-9 9"/></svg>
+          <span>项目图片 · 待补充</span>
+        </div>
+        <div class="tag">住宅 · 投标</div>
+        <h3>首开 · 成都双流怡心湖 69 亩</h3>
+        <div class="meta">主创 / 项目负责人 · 2020 · 大高+叠墅 · 16万㎡ · 容积率2.0</div>
+        <p>两轮投标均参与，主导户型设计与前期强排方案总图深化；通过与竞品户型对标，主导高层+叠墅复合产品策略。</p>
+      </div>
+
+      <div class="project">
+        <div class="ph">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5-9 9"/></svg>
+          <span>项目图片 · 待补充</span>
+        </div>
+        <div class="tag">研发课题</div>
+        <h3>华润华西大区户型标准化研发</h3>
+        <div class="meta">项目负责人 · 2020 · 标准化户型库</div>
+        <p>全程主导，从提报、阶段汇报到成册交付，沉淀标准化产品力方法论。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 关于 -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="en">ABOUT</div>
+      <h2>关于我</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>7 年主案建筑师，先后经历上海方大、成都基准方中、上海骏地、杭州中观四家头部设计机构，亲历住宅与文旅双赛道。</p>
+        <p>住宅产品力扎实（强排 + 户型 + 立面），文旅策划有感觉（在地文化 + 旧改 + 运营），完整经历强排、户型、立面、投标、汇报全流程，具备总负责人级别的项目操盘能力。</p>
+        <div class="quote">"化险为夷，是在对的位置做对的事。做项目也一样——先把方向和边界想清楚，再动手。"</div>
+        <div class="skills">
+          <h4>设计软件</h4>
+          <div class="chips"><span class="chip">AutoCAD</span><span class="chip">Photoshop</span><span class="chip">Illustrator</span><span class="chip">InDesign</span><span class="chip">SketchUp</span><span class="chip">Rhino</span><span class="chip">D5</span><span class="chip">PPT</span></div>
+          <h4 style="margin-top:22px;">专业能力</h4>
+          <div class="chips"><span class="chip">强排设计</span><span class="chip">户型创新</span><span class="chip">立面造型</span><span class="chip">文旅策划</span><span class="chip">城市更新</span><span class="chip">旧建筑改造</span><span class="chip">在地文化研究</span><span class="chip">投标汇报</span><span class="chip">多专业协同</span></div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="y">2024 — 2025</div><h4>主创建筑师</h4><div class="co">杭州中观建筑规划设计有限公司（中观-国美院风景建筑研究院体系）</div></div>
+        <div class="tl-item"><div class="y">2021 — 2024</div><h4>建筑师</h4><div class="co">上海骏地建筑设计事务所 · 售楼处/商业/城市更新/文旅度假多产品线</div></div>
+        <div class="tl-item"><div class="y">2020 — 2021</div><h4>建筑师</h4><div class="co">成都基准方中建筑设计有限公司 · 总图强排/户型/居住区配套</div></div>
+        <div class="tl-item"><div class="y">2018 — 2020</div><h4>助理建筑师</h4><div class="co">上海方大建筑设计有限公司 · 系统建立住宅项目全流程认知</div></div>
+        <div class="tl-item"><div class="y">2013 — 2018</div><h4>建筑学 本科</h4><div class="co">河南理工大学 建筑与艺术设计学院</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 合作流程 -->
+<section id="flow">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="en">PROCESS</div>
+      <h2>合作流程</h2>
+      <div class="desc">固定范围、固定节点，减少来回扯皮——这是对项目负责，也是对你的时间负责。</div>
+    </div>
+    <div class="flow">
+      <div class="step"><div class="n">01</div><h4>接洽</h4><p>了解项目类型、现状与时间预算，判断是否合适、如何配合。</p></div>
+      <div class="step"><div class="n">02</div><h4>需求对齐</h4><p>明确范围、交付物、节点与改稿轮次，先对齐再动手。</p></div>
+      <div class="step"><div class="n">03</div><h4>报价签约</h4><p>按固定范围固定价报价，白纸黑字，避免后期无限修改。</p></div>
+      <div class="step"><div class="n">04</div><h4>设计执行</h4><p>方案 → 深化 → 施工图，阶段性同步确认，不闷头做。</p></div>
+      <div class="step"><div class="n">05</div><h4>交付配合</h4><p>按节点交付成果，配合后续修改与施工对接。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 联系 -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="en">CONTACT</div>
+      <h2>聊聊你的项目</h2>
+    </div>
+    <p class="sub">地产 / 文旅 / 设计院分包合作，欢迎发来项目情况，24 小时内回复。</p>
+    <div class="contact-ways">
+      <div class="way"><div class="k">邮箱</div><div class="v"><a href="mailto:2387258647@qq.com">2387258647@qq.com</a></div></div>
+      <div class="way"><div class="k">电话 / 微信</div><div class="v"><a href="tel:15538953786">15538953786</a></div></div>
+      <div class="way"><div class="k">地区</div><div class="v">浙江 · 杭州</div></div>
+      <div class="way"><div class="k">Upwork</div><div class="v">待补充</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 梨一枝 · 主案建筑师 · 住宅 × 文旅</div>
+    <div style="margin-top:10px;"><a class="up" href="#top">回到顶部 ↑</a></div>
+  </div>
+</footer>
+
+<script>
+  var btn=document.getElementById('menuBtn'),links=document.getElementById('navLinks');
+  btn.addEventListener('click',function(){links.classList.toggle('open');});
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');});});
+</script>
+
+</body>
+</html>
